@@ -1,0 +1,11 @@
+version: "3.6"
+
+services:
+  dotnetbuild:
+    build:
+      context: dotnet
+      dockerfile: Dockerfile_build
+  dotnetruntime:
+    build:
+      context: dotnet
+      dockerfile: Dockerfile_runtime

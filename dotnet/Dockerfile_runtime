@@ -1,0 +1,15 @@
+FROM microsoft/nanoserver AS installer
+ARG nodever=8.11.3
+ARG arch=x64
+SHELL ["powershell", "-Command", "$ErrorActionPreference = 'STOP'; $ProgressPreference = 'SilentlyContinue';"]
+
+WORKDIR /downloads
+ADD ["https://nodejs.org/dist/v8.11.3/node-v${nodever}-win-${arch}.zip", "./node.zip"]
+RUN Expand-Archive node.zip -DestinationPath node;
+RUN Remove-Item -Force node.zip
+
+
+FROM microsoft/dotnet:runtime
+COPY --from=installer ["C:/downloads/node/node-v${nodever}-win-${arch}", "C:/Program Files/nodejs"]
+USER ContainerAdministrator
+RUN setx /M PATH "%PATH%;C:/Program Files/nodejs"
