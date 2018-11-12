@@ -2,16 +2,23 @@ version: "3.6"
 
 services:
   dotnetbuild:
-    image: mindfire.dotnet_sdk.node:latest
+    image: docker.dev.mfire.co/mindfire.dotnet_sdk.node:latest
     build:
       context: dotnet
       dockerfile: Dockerfile_build
       labels:
         com.mindfiretechnology.description: ".NET SDK build image that includes NodeJS"
   dotnetruntime:
-    image: mindfire.dotnet_runtime.node:latest
+    image: docker.dev.mfire.co/mindfire.dotnet_runtime.node:latest
     build:
       context: dotnet
       dockerfile: Dockerfile_runtime
+      labels:
+        com.mindfiretechnology.description: ".NET Runtime image that includes NodeJS"
+  dotnetruntime:
+    image: docker.dev.mfire.co/mindfire.dotnet_runtime.node:2.1
+    build:
+      context: dotnet
+      dockerfile: Dockerfile_runtime-2.1
       labels:
         com.mindfiretechnology.description: ".NET Runtime image that includes NodeJS"
