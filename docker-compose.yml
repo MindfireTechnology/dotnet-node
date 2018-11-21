@@ -5,20 +5,27 @@ services:
     image: docker.dev.mfire.co/mindfire.dotnet_sdk.node:latest
     build:
       context: dotnet
-      dockerfile: Dockerfile_build
+      dockerfile: dotnet2.1/Dockerfile_build_win10
+      labels:
+        com.mindfiretechnology.description: ".NET SDK build image that includes NodeJS"
+  dotnetbuild:
+    image: docker.dev.mfire.co/mindfire.dotnet_sdk.node:latest_win2016
+    build:
+      context: dotnet
+      dockerfile: dotnet2.1/Dockerfile_build_win2016
       labels:
         com.mindfiretechnology.description: ".NET SDK build image that includes NodeJS"
   dotnetruntime:
     image: docker.dev.mfire.co/mindfire.dotnet_runtime.node:latest
     build:
       context: dotnet
-      dockerfile: Dockerfile_runtime
+      dockerfile: dotnet2.1/Dockerfile_runtime_win10
       labels:
         com.mindfiretechnology.description: ".NET Runtime image that includes NodeJS"
   dotnetruntime:
-    image: docker.dev.mfire.co/mindfire.dotnet_runtime.node:2.1
+    image: docker.dev.mfire.co/mindfire.dotnet_runtime.node:latest_win2016
     build:
       context: dotnet
-      dockerfile: Dockerfile_runtime-2.1
+      dockerfile: dotnet2.1/Dockerfile_runtime_win2016
       labels:
         com.mindfiretechnology.description: ".NET Runtime image that includes NodeJS"
