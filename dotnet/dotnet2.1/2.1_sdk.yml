@@ -1,0 +1,12 @@
+image: mindfiretech/dotnet.node:2.1-sdk
+manifests:
+  -
+    image: mindfiretech/dotnet.node:2.1-sdk-nanoserver
+    platform:
+      architecture: amd64
+      os: windows
+  -
+    image: mindfiretech/dotnet.node:2.1-sdk-alpine
+    platform:
+      architecture: amd64
+      os: linux
