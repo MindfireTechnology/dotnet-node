@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2.2-aspnetcore-runtime-alpine
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2-alpine
 ARG NODE_VERSION=10.14.2
 ARG YARN_VERSION=1.12.3
 
