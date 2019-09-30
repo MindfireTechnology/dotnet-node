@@ -1,7 +1,7 @@
 FROM mcr.microsoft.com/powershell:nanoserver-1903 AS installer
 ARG nodever=10.16.3
 ARG arch=x64
-SHELL ["cmd", "-Command"]
+SHELL ["pwsh", "-Command"]
 
 WORKDIR /downloads
 ADD ["https://nodejs.org/dist/v${nodever}/node-v${nodever}-win-${arch}.zip", "./node.zip"]
@@ -14,6 +14,6 @@ ARG nodever=10.16.3
 ARG arch=x64
 
 COPY --from=installer ["C:/downloads/node/node-v${nodever}-win-${arch}", "C:/Program Files/nodejs"]
-# USER ContainerAdministrator
-RUN ["setx", "/M PATH \"$Env:PATH;C:/Program Files/nodejs;C:/Program Files/dotnet;\""]
-# USER ContainerUser
+#USER ContainerAdministrator
+RUN setx /M PATH "\"$Env:PATH;c:\Program Files\nodejs\";"
+#USER ContainerUser
