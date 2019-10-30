@@ -1,5 +1,5 @@
 FROM mcr.microsoft.com/powershell:nanoserver-1903 AS installer
-ARG nodever=10.16.3
+ARG nodever=12.13.0
 ARG arch=x64
 SHELL ["pwsh", "-Command"]
 
@@ -10,7 +10,7 @@ RUN Remove-Item -Force node.zip
 
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:2.2-nanoserver-sac2016
-ARG nodever=10.16.3
+ARG nodever=12.13.0
 ARG arch=x64
 
 COPY --from=installer ["C:/downloads/node/node-v${nodever}-win-${arch}", "C:/Program Files/nodejs"]
