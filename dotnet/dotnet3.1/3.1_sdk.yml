@@ -1,4 +1,4 @@
-image: mindfiretech/dotnet.node:latest
+image: mindfiretech/dotnet.node:3.1-sdk
 manifests:
   -
     image: mindfiretech/dotnet.node:3.1-sdk-nanoserver

@@ -1,0 +1,24 @@
+version: "3.6"
+
+services:
+  dotnetbuild-linux:
+    image: docker.dev.mfire.co/mindfire.dotnet.node:3.1-sdk-alpine
+    build:
+      context: "Debian"
+      dockerfile: Dockerfile_sdk
+      labels:
+        com.mindfiretechnology.description: ".NET SDK build image that includes NodeJS"
+  dotnetruntime-linux:
+    image: docker.dev.mfire.co/mindfire.dotnet.node:3.1-runtime-alpine
+    build:
+      context: "Debian"
+      dockerfile: Dockerfile_runtime
+      labels:
+        com.mindfiretechnology.description: ".NET Runtime image that includes NodeJS"
+  dotnetasp-linux:
+    image: docker.dev.mfire.co/mindfire.dotnet.node:3.1-aspnetcore-alpine
+    build:
+      context: "Debian"
+      dockerfile: Dockerfile_aspnet
+      labels:
+        com.mindfiretechnology.descripion: "ASP.NET Core Runtime image that includes NodeJS"

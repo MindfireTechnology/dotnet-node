@@ -1,0 +1,24 @@
+version: "3.6"
+
+services:
+  dotnetbuild:
+    image: docker.dev.mfire.co/mindfire.dotnet.node:3.1-sdk
+    build:
+      context: "Windows 10"
+      dockerfile: Dockerfile_sdk
+      labels:
+        com.mindfiretechnology.description: ".NET SDK build image that includes NodeJS"
+  dotnetruntime:
+    image: docker.dev.mfire.co/mindfire.dotnet.node:3.1-runtime
+    build:
+      context: "Windows 10"
+      dockerfile: Dockerfile_runtime
+      labels:
+        com.mindfiretechnology.description: ".NET Runtime image that includes NodeJS"
+  dotnetasp:
+    image: docker.dev.mfire.co/mindfire.dotnet.node:3.1-aspnetcore
+    build:
+      context: "Windows 10"
+      dockerfile: Dockerfile_aspnet
+      labels:
+        com.mindfiretechnology.descripion: "ASP.NET Core Runtime image that includes NodeJS"
