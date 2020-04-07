@@ -15,6 +15,13 @@ services:
       dockerfile: Dockerfile_sdk
       labels:
         com.mindfiretechnology.description: ".NET SDK build image that includes NodeJS"
+  dotnetbuildnanoserver-2019:
+    image: docker.dev.mfire.co/mindfire.dotnet.node:2.1-sdk-nanoserver-2019
+    build:
+      context: "Windows Server 2019"
+      dockerfile: Dockerfile_sdk
+      labels:
+        com.mindfiretechnology.description: ".NET SDK build image that includes NodeJS"
   dotnetruntime:
     image: docker.dev.mfire.co/mindfire.dotnet.node:2.1-runtime
     build:
@@ -26,6 +33,13 @@ services:
     image: docker.dev.mfire.co/mindfire.dotnet.node:2.1-runtime-nanoserver
     build:
       context: "Windows Server 2016"
+      dockerfile: Dockerfile_runtime
+      labels:
+        com.mindfiretechnology.description: ".NET Runtime image that includes NodeJS"
+  dotnetruntimenanoserver-2019:
+    image: docker.dev.mfire.co/mindfire.dotnet.node:2.1-runtime-nanoserver-2019
+    build:
+      context: "Windows Server 2019"
       dockerfile: Dockerfile_runtime
       labels:
         com.mindfiretechnology.description: ".NET Runtime image that includes NodeJS"
@@ -43,3 +57,10 @@ services:
       dockerfile: Dockerfile_aspnet
       labels:
         com.mindfiretechnology.descripion: "ASP.NET Core Runtime image that includes NodeJS"
+  dotnetaspnanoserver-2019:
+    image: docker.dev.mfire.co/mindfire.dotnet.node:2.1-aspnetcore-nanoserver-2019
+    build:
+      context: "Windows Server 2016"
+      dockerfile: Dockerfile_aspnet
+      labels:
+        com.mindfiretechnology.descripion: "ASP.NET Core Runtime image that includes NodeJS"        

@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/powershell:lts-nanoserver-1809 AS installer
+FROM mcr.microsoft.com/powershell:nanoserver-1809 AS installer
 ARG nodever=12.13.0
 ARG arch=x64
 SHELL ["pwsh", "-Command"]
@@ -9,7 +9,7 @@ RUN Expand-Archive node.zip -DestinationPath node;
 RUN Remove-Item -Force node.zip
 
 
-FROM mcr.microsoft.com/dotnet/core/runtime:2.2-nanoserver-1903
+FROM mcr.microsoft.com/dotnet/core/runtime:2.1-nanoserver-1809
 ARG nodever=12.13.0
 ARG arch=x64
 
