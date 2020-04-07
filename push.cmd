@@ -11,10 +11,13 @@ docker push docker.dev.mfire.co/mindfire.dotnet.node:2.1-aspnetcore-nanoserver
 
 docker push docker.dev.mfire.co/mindfire.dotnet.node:2.2-sdk
 docker push docker.dev.mfire.co/mindfire.dotnet.node:2.2-sdk.nanoserver
+docker push docker.dev.mfire.co/mindfire.dotnet.node:2.2-sdk-nanoserver-2019
 docker push docker.dev.mfire.co/mindfire.dotnet.node:2.2-runtime
 docker push docker.dev.mfire.co/mindfire.dotnet.node:2.2-runtime-nanoserver
+docker push docker.dev.mfire.co/mindfire.dotnet.node:2.2-runtime-nanoserver-2019
 docker push docker.dev.mfire.co/mindfire.dotnet.node:2.2-aspnetcore
 docker push docker.dev.mfire.co/mindfire.dotnet.node:2.2-aspnetcore-nanoserver
+docker push docker.dev.mfire.co/mindfire.dotnet.node:2.2-aspnetcore-nanoserver-2019
 
 docker push docker.dev.mfire.co/mindfire.dotnet.node:3.1-sdk
 docker push docker.dev.mfire.co/mindfire.dotnet.node:3.1-sdk.nanoserver
