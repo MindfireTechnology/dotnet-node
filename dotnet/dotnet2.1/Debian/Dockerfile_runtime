@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/core/runtime:2.1-alpine
+FROM mcr.microsoft.com/dotnet/core/runtime:2.1.17-alpine3.11
 ARG NODE_VERSION=10.14.2
 ARG YARN_VERSION=1.12.3
 

@@ -90,3 +90,11 @@ docker push mindfiretech/dotnet.node:3.1-aspnetcore-nanoserver
 docker push mindfiretech/dotnet.node:3.1-aspnetcore-nanoserver-2019
 
 docker push mindfiretech/dotnet.node:latest
+
+docker pull docker.dev.mfire.co/mindfire.dotnet.node:2.2-sdk-nanoserver-2019
+docker pull docker.dev.mfire.co/mindfire.dotnet.node:2.2-runtime
+docker pull docker.dev.mfire.co/mindfire.dotnet.node:2.2-runtime-nanoserver
+docker pull docker.dev.mfire.co/mindfire.dotnet.node:2.2-runtime-nanoserver-2019
+docker pull docker.dev.mfire.co/mindfire.dotnet.node:2.2-aspnetcore
+docker pull docker.dev.mfire.co/mindfire.dotnet.node:2.2-aspnetcore-nanoserver
+docker pull docker.dev.mfire.co/mindfire.dotnet.node:2.2-aspnetcore-nanoserver-2019

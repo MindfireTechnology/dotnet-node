@@ -14,7 +14,6 @@ ARG nodever=12.13.0
 ARG arch=x64
 
 COPY --from=installer ["C:/downloads/node/node-v${nodever}-win-${arch}", "C:/Program Files/nodejs"]
-#USER ContainerAdministrator
-#RUN setx /M PATH "\"${Env:PATH};C:\Program Files\dotnet\";"
-#RUN setx /M PATH "\"${Env:PATH};c:\Program Files\nodejs\";"
-#USER ContainerUser
+USER ContainerAdministrator
+RUN setx /M PATH "\"${Env:PATH};C:\Program Files\dotnet\;C:\Program Files\nodejs\";"
+USER ContainerUser

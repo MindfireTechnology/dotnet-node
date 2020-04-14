@@ -63,4 +63,4 @@ services:
       context: "Windows Server 2019"
       dockerfile: Dockerfile_aspnet
       labels:
-        com.mindfiretechnology.descripion: "ASP.NET Core Runtime image that includes NodeJS"        
+        com.mindfiretechnology.descripion: "ASP.NET Core Runtime image that includes NodeJS"
