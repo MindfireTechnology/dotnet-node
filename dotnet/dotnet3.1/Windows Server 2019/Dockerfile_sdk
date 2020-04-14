@@ -15,5 +15,5 @@ ARG arch=x64
 
 COPY --from=installer ["C:/downloads/node/node-v${nodever}-win-${arch}", "C:/Program Files/nodejs"]
 USER ContainerAdministrator
-RUN setx /M PATH "\"${Env:PATH};c:\Program Files\nodejs\";"
+RUN setx /M PATH "%PATH%";"C:\Program Files\nodejs\"
 USER ContainerUser

@@ -33,8 +33,8 @@ REM PUSHING TO GITHUB -- break script now if you do not wish to do this
 timeout 30
 
 docker tag docker.dev.mfire.co/mindfire.dotnet.node:2.1-sdk mindfiretech/dotnet.node:2.1-sdk
-docker tag docker.dev.mfire.co/mindfire.dotnet.node:2.1-sdk.nanoserver mindfiretech/dotnet.node:2.1-sdk.nanoserver
-docker tag docker.dev.mfire.co/mindfire.dotnet.node:2.1-sdk.nanoserver-2019 mindfiretech/dotnet.node:2.1-sdk.nanoserver-2019
+docker tag docker.dev.mfire.co/mindfire.dotnet.node:2.1-sdk-nanoserver mindfiretech/dotnet.node:2.1-sdk-nanoserver
+docker tag docker.dev.mfire.co/mindfire.dotnet.node:2.1-sdk-nanoserver-2019 mindfiretech/dotnet.node:2.1-sdk-nanoserver-2019
 docker tag docker.dev.mfire.co/mindfire.dotnet.node:2.1-runtime mindfiretech/dotnet.node:2.1-runtime
 docker tag docker.dev.mfire.co/mindfire.dotnet.node:2.1-runtime-nanoserver mindfiretech/dotnet.node:2.1-runtime-nanoserver
 docker tag docker.dev.mfire.co/mindfire.dotnet.node:2.1-runtime-nanoserver-2019 mindfiretech/dotnet.node:2.1-runtime-nanoserver-2019
