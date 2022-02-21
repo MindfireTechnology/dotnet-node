@@ -1,0 +1,66 @@
+version: "3.6"
+
+services:
+  dotnetbuild:
+    image: docker.dev.mfire.co/mindfire.dotnet.node:6.0-sdk
+    build:
+      context: "Windows 10"
+      dockerfile: Dockerfile_sdk
+      labels:
+        com.mindfiretechnology.description: ".NET SDK build image that includes NodeJS"
+  dotnetbuildnanoserver2019:
+    image: docker.dev.mfire.co/mindfire.dotnet.node:6.0-sdk-nanoserver-1809
+    build:
+      context: "Windows Server 2019"
+      dockerfile: Dockerfile_sdk
+      labels:
+        com.mindfiretechnology.description: ".NET SDK build image that includes NodeJS"
+  dotnetbuildnanoserver:
+    image: docker.dev.mfire.co/mindfire.dotnet.node:6.0-sdk-nanoserver
+    build:
+      context: "Windows Server 2022"
+      dockerfile: Dockerfile_sdk
+      labels:
+        com.mindfiretechnology.description: ".NET SDK build image that includes NodeJS"
+  dotnetruntime:
+    image: docker.dev.mfire.co/mindfire.dotnet.node:6.0-runtime
+    build:
+      context: "Windows 10"
+      dockerfile: Dockerfile_runtime
+      labels:
+        com.mindfiretechnology.description: ".NET Runtime image that includes NodeJS"
+  dotnetruntimenanoserver2019:
+    image: docker.dev.mfire.co/mindfire.dotnet.node:6.0-runtime-nanoserver-1809
+    build:
+      context: "Windows Server 2019"
+      dockerfile: Dockerfile_runtime
+      labels:
+        com.mindfiretechnology.description: ".NET Runtime image that includes NodeJS"
+  dotnetruntimenanoserver:
+    image: docker.dev.mfire.co/mindfire.dotnet.node:6.0-runtime-nanoserver
+    build:
+      context: "Windows Server 2022"
+      dockerfile: Dockerfile_runtime
+      labels:
+        com.mindfiretechnology.description: ".NET Runtime image that includes NodeJS"
+  dotnetasp:
+    image: docker.dev.mfire.co/mindfire.dotnet.node:6.0-aspnetcore
+    build:
+      context: "Windows 10"
+      dockerfile: Dockerfile_aspnet
+      labels:
+        com.mindfiretechnology.descripion: "ASP.NET Core Runtime image that includes NodeJS"
+  dotnetaspnanoserver:
+    image: docker.dev.mfire.co/mindfire.dotnet.node:6.0-aspnetcore-nanoserver
+    build:
+      context: "Windows Server 2022"
+      dockerfile: Dockerfile_aspnet
+      labels:
+        com.mindfiretechnology.descripion: "ASP.NET Core Runtime image that includes NodeJS"
+  dotnetaspnanoserver2019:
+    image: docker.dev.mfire.co/mindfire.dotnet.node:6.0-aspnetcore-nanoserver-1809
+    build:
+      context: "Windows Server 2019"
+      dockerfile: Dockerfile_aspnet
+      labels:
+        com.mindfiretechnology.descripion: "ASP.NET Core Runtime image that includes NodeJS"
