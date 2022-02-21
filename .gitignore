@@ -10,3 +10,4 @@
 
 bin/
 obj/
+/dotnet/dotnet3.1/Debian/*.orig
