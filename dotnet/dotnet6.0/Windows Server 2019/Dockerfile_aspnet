@@ -9,7 +9,7 @@ RUN Expand-Archive node.zip -DestinationPath node;
 RUN Remove-Item -Force node.zip
 
 
-FROM mcr.microsoft.com/dotnet/sdk:3.1-nanoserver-1809
+FROM mcr.microsoft.com/dotnet/aspnet:6.0-nanoserver-1809
 ARG nodever=16.14.0
 ARG arch=x64
 
